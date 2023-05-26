@@ -1,0 +1,27 @@
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  .card {
+    margin: 25px 25px 25px 0;
+    padding: 15px;
+    width: 300px;
+    background-image: url(https://i.pinimg.com/564x/cc/bc/11/ccbc1196dc6fae568197a46a971de2c7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    border-radius: 8px;
+    .text-card {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+    }
+  }
+}

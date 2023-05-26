@@ -1,4 +1,25 @@
-<h1>lists</h1>
-<% @lists.each do |list| %>
-<%= link_to list.name, list_path(list) %>
-<% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"/>
+    </a>
+    <div class="nav-bar">
+      <%= link_to "add a new list", new_list_path %>
+    </div>
+  </div>
+</div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cinemacao.com/wp-content/uploads/2014/08/baixar-posteres-filme-gratis.png);">
+    <h1><strong>Film Lists</strong></h1>
+</div>
+
+<div class="container">
+  <% @lists.each do |list| %>
+  <div class="card">
+    <div class="text-card">
+        <%= link_to list.name, list_path(list) %>
+        <%= link_to "delete", list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    </div>
+  </div>
+  <% end %>
+</div>
